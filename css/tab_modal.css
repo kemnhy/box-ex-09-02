@@ -1,0 +1,111 @@
+@charset "utf-8";
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-size: 16px;
+        background-color: #fff;
+        color: #666;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #666;
+      }
+      /* 텝 메뉴 */
+      .tabmenu{
+        position: relative;
+        /* background-color: beige; */
+        width: 100%;
+        max-width: 1200px;
+        margin:  100px auto;
+      }
+      .tabmenu > li{
+        position: absolute;
+        
+      }
+      .tabmenu > li > a{
+        background-color: aquamarine;
+        width: 100px;
+        line-height: 40px;
+        text-align: center;
+      }
+      .tabmenu > li.active > a{
+        background-color: #333;
+        color: #fff;
+      }
+      .tabmenu > li:last-child > a{
+        position: absolute;
+        left: 100px;
+      }
+      /* 탭 메뉴 내용 영역 */
+      .tabmenu > li >div{
+        background-color: rgb(90, 212, 172);
+        width: 600px;
+        padding: 20px 10px;
+        display: none;
+
+      }
+      .tabmenu > li.active > div{
+        display: block;
+
+      }
+      /* 공지사항 */
+      .notice > ul > li > a{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+
+      }
+      .notice > ul > li:nth-child(even) > a {
+        background-color: azure;
+
+      }
+      /* 갤러리 */
+      .gallery{
+        position: absolute;
+        top: 50px;
+
+      }
+      .gallery ul{
+        display: flex;
+        justify-content: space-between;
+
+      }
+      /* modal 창 */
+       #modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 9;
+        display: none;
+      }
+      #modal.active {
+        display: block;
+      }
+      .modal-inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 500px;
+      }
+      .modal-btn {
+        cursor: pointer;
+      }
