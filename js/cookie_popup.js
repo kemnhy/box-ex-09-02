@@ -3,7 +3,7 @@ $(function(){
     let chk = $("#chk")
     // 쿠키 팝업에 값이  "none" 이면 팝업을 숨김
     if($.cookie("popup") === "none"){
-        $(".notice_wrap").hide()
+        $(".notice_wrap").fadeIn()
     } 
     $(".closeBtn").click(function(){
         // console.log(chk.is(":checked"));
